@@ -65,7 +65,7 @@ class TestMemoryBaseline(unittest.TestCase):
                     i, gpu_msec * 1000, (end_cpu - start_cpu) * 1000000,
                     file=sys.stderr))
         print("avg gpu time: " + str(sum(total_gpu_time[1:]) / len(total_gpu_time[1:])))
-        print("avg cpu time: " + str(sum(total_cpu_time[1:]) / len(total_cpu_time[1:])))
+        print("total cpu time: " + str((sum(total_cpu_time[1:]))/1000000))
     def weights_init(self, m):
         classname = m.__class__.__name__
         if classname.find('Conv3d') != -1:
