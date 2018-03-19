@@ -20,9 +20,9 @@ class TestMemoryBaseline(unittest.TestCase):
         # total_iters = 10    # (warmup + benchmark)
         # iterations = 4
 
-        N = 32
+        N = 8
         total_iters = 10    # (warmup + benchmark)
-        iterations = 1
+        iterations = 4
 
         target = Variable(torch.randn(N).fill_(1)).type("torch.LongTensor")
         x = Variable(torch.randn(N, 3, 32, 32).fill_(1.0), requires_grad=True)

@@ -26,9 +26,9 @@ class TestMemoryBaseline(unittest.TestCase):
         # total_iters = 10
         # iterations = 2
 
-        N = 16
+        N = 4
         total_iters = 10    # (warmup + benchmark)
-        iterations = 1
+        iterations = 4
 
         total_start = time.time()
         target = Variable(torch.randn(N, 1, 128, 128, 64).fill_(1)).type("torch.LongTensor")
@@ -78,7 +78,7 @@ class TestMemoryBaseline(unittest.TestCase):
                     file=sys.stderr))
         print("total_time: " + str(time.time() - total_start))
         print("avg gpu time: " + str(sum(total_gpu_time[1:]) / len(total_gpu_time[1:])))
-        print("total cpu time: " + str(sum(total_cpu_time[1:])))
+        print("total cpu time: " + str((sum(total_cpu_time[1:]) / 1000000)))
 
     def repackage_hidden(self, h):
         """Wraps hidden states in new Variables, to detach them from their history."""
