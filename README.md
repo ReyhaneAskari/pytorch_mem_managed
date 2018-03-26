@@ -30,7 +30,7 @@ Benchmark results:
 
 
 
-|                                | Wordnet            | Wordnet managed   | Wordnet managed     | Wordnet managed     | Wordnet            | Wordnet managed    |
+|                                | Word Language model            | Word Language model managed   | Word Language model managed     | Word Language model managed     | Word Language model            | Word Language model managed    |
 |--------------------------------|--------------------|-------------------|---------------------|---------------------|--------------------|--------------------|
 | Total iterations (runs * iter) | 5 * 20             | 5 * 20            | 1 * 20              | 1 * 20              | 5 * 20             | 5 * 20             |
 | mini-batch-size                | 50                 | 50                | 250                 | 50                  | 250                | 250                |
